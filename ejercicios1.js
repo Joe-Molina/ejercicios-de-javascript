@@ -1,7 +1,18 @@
 /*
 1)Programa una función que cuente el número de caracteres
 de una cadena de texto, pe. 
-miFuncion("Hola Mundo") devolverá 10.
+miFuncion("Hola Mundo") devolverá 10.*/
+
+
+const contarCaracteres = (cadena = "") => 
+(!cadena)
+? console.warn("no ingresaste un texto")
+: console.info(`la cadena "${cadena}" tiene ${cadena.length} caracteres`);
+
+contarCaracteres("tu mama tiene pito");
+
+
+
 
 //1er intento
 /*
@@ -13,6 +24,7 @@ contarCarac("hola mundo")
 */
 
 //2do intento
+
 
 /*function contarCaracteres(cadena = ""){
     if (!cadena){
@@ -38,6 +50,15 @@ console.clear();
 según el número de caracteres indicados, pe.
 miFuncion("Hola Mundo", 4) devolverá "Hola".
 */
+
+const recortarTexto = (cadena = "", longitud = undefined) => 
+(!cadena)
+? console.warn("no ingresaste la cadena de texto")
+: console.info(cadena.slice(0,longitud));
+
+recortarTexto("tu mama", 5)
+
+
 /*
 const recortarTexto = (cadena ="", longitud = 
 undefined) => 
@@ -78,6 +99,20 @@ if (!cadena){
     console.info(cadena)  
 }}
 }
+*/
+
+const repetirTexto = (texto = "", repetir = undefined) => {
+
+    if(!texto) return console.warn("no ingresaste un texto");
+
+    if(repetir === undefined) return console.warn("no ingresaste la veces que debe repetirse el texto");
+
+    if(Math.sign(repetir)=== -1) return console.warn("el numero de veces a repetir no puede ser negativo");
+
+    for (let i = 0; i < repetir; i++)console.info(`${texto},${i}`)
+
+}
+/*
 
 ciclo("holaSEÑORES",3);
 
@@ -93,10 +128,10 @@ const repetirTexto = (texto = "", veces = undefined)=> {
     
     for (let i = 0; i < veces; i++)console.info(`${texto},${i}`); 
 }
+*/
 
 repetirTexto("hola mundo",3);
 repetirTexto("hola mundo",0);
 repetirTexto("hola mundo",-3);
 repetirTexto("",4);
 repetirTexto("hola mundo");
-*/

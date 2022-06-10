@@ -60,7 +60,7 @@ const calcularAnios=(fecha = undefined)=>{
 
     if(!(fecha instanceof Date)) return console.error("no ingresaste una fecha valida")
 
-    let hoyMenosLaFecha = new Date().getTime() -fecha.getTime(),
+    let hoyMenosLaFecha = new Date().getTime() - fecha.getTime(),
     aniosMS = 1000*60*60*24*365
     aniosHumanos = Math.floor(hoyMenosLaFecha / aniosMS);
 

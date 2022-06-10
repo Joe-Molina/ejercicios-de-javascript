@@ -39,7 +39,7 @@ const quitarDuplicados = (arr=undefined)=>{
 
     return console.info({
         original: arr,
-        sinDuplicados: arr.filter((value,index,self)=> self.indexOf(value)===index)
+        sinDuplicados: arr.filter((value,index,self) => self.indexOf(value)===index)
     })
 }
 
@@ -74,3 +74,4 @@ const promedio = (arr=undefined)=>{
 }
 
 promedio([1,2,3,4,5,6,7,8,9,0])
+console.clear();
